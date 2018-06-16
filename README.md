@@ -3,9 +3,13 @@
 Prerequisites:
 
 Install Kops
+
 Install Kubectl
+
 Install AWS CLI with Access keys & Secret keys
+
 Create a Bucket
+
 Create a hosted zone in AWS for service discovery for kubernetes
 
 
@@ -37,19 +41,26 @@ https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
     username: admin
 vagrant@ubuntu-xenial:~$ kubectl config use-context dev.qlikuse.com
+
 Switched to context "dev.qlikuse.com".
-vagrant@ubuntu-xenial:~$ kubectl cluster-info
-Kubernetes master is running at https://api.dev.qlikuse.com
-KubeDNS is running at https://api.dev.qlikuse.com/api/v1/proxy/namespaces/kube-system/services/kube-dns
+
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+
 vagrant@ubuntu-xenial:~$ kubectl config use-context qa.qlikuse.com
+
 Switched to context "qa.qlikuse.com".
+
 vagrant@ubuntu-xenial:~$ kubectl cluster-info
+
 Kubernetes master is running at https://api.qa.qlikuse.com
+
 KubeDNS is running at https://api.qa.qlikuse.com/api/v1/proxy/namespaces/kube-system/services/kube-dns
 
+
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+
 vagrant@ubuntu-xenial:~$ kubectl config current-context
+
 qa.qlikuse.com
-vagrant@ubuntu-xenial:~$ kubectl config current-context
+
